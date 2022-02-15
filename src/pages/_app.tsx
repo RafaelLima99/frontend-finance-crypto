@@ -4,6 +4,7 @@ import {ThemeProvider, createTheme} from '@mui/material/styles'
 import NavBar from '../ui/components/NavBar/NavBar'
 import Footer from '../ui/components/Footer/Footer'
 import CssBaseline from '@mui/material/CssBaseline';
+import {AuthProvider} from '../data/contexts/AuthContext'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -24,8 +25,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-      <NavBar/>
+      {/* <NavBar/> */}
+      <AuthProvider>
       <Component {...pageProps} />
+      </AuthProvider>
       <Footer/>
     </ThemeProvider>
   )

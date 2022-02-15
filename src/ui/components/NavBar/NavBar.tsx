@@ -19,6 +19,9 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 
+
+import ButtonProfile from '../ButtonProfile/ButtonProfile';
+
 // drawer
 
 const drawerWidth = 240;
@@ -107,8 +110,10 @@ export default function PersistentDrawerLeft() {
           </Typography>
           
           
-          
-          <IconButton
+            <ButtonProfile/>
+
+
+          {/* <IconButton
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
@@ -117,7 +122,7 @@ export default function PersistentDrawerLeft() {
                 color="inherit"
               >
               <AccountCircle />
-              </IconButton>
+              </IconButton> */}
         </Toolbar>
       </AppBar>
        {/** barra fim */}
