@@ -26,7 +26,7 @@ export async function signInRequest(data: SignInRequestData){
 
 export async function recoverUserInformation() {
  
-    const userinformation:any = api.get("auth/userinformation").
+    const userinformation:any = api.get("auth/userinf ormation").
     then((response) => {return response.data} ).
     catch(function (error) { 
 

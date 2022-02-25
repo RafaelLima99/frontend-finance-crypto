@@ -12,7 +12,7 @@ export const PaperFooter = styled(Paper)`
     //deixa texto alinhado verticalmente
     line-height: 50px;
    
-    background-color: ${props => props.theme.palette.primary.main};
+    /* background-color: ${props => props.theme.palette.primary.main}; */
    
 `;
 

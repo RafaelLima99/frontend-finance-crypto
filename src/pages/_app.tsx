@@ -12,12 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const theme = createTheme({
     palette:{
       mode: "dark",
-      primary: {
-        light: '#00f853',
-        main: '#df0f88',
-        dark: '#4c03f7',
-        contrastText: '#fff',
-      },
+     
     }
   })
 
