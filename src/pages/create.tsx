@@ -15,6 +15,7 @@ import FormattedInputs from '../ui/components/CurrenceInput/CurrenceInput'
 
 
 import NonLinearSlider from '../ui/components/Slider/Slider'
+import Router from 'next/router'
 
 
 const top100Films = [
@@ -36,7 +37,11 @@ export const Teste = ()=> {
 
     function handleRegister(data:any){
         //console.log(data)
-        createCoinUser(data)
+        let response = createCoinUser(data)
+
+        if(response){
+            Router.push('/')
+        }
     }
     
     return (
@@ -95,12 +100,15 @@ export const Teste = ()=> {
         <Grid item xs={12} md={6}>
             {/* Alavancagem <NonLinearSlider/> */}
 
-                <FormattedInputs name="teste" id="teste" label="Preço"/>
+                {/* <FormattedInputs name="teste" id="teste" label="Preço"/> */}
             {/* 
                 <TextField
                     
                 fullWidth label="Alavancagem" id="leverage"
                 /> */}
+
+            <TextField fullWidth label="Alavancagem (não obrigatorio)" id="leverage" {...register('leverage')}/>
+
 
         </Grid> 
         <Grid item xs={12} md={6}>
